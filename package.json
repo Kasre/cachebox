@@ -1,7 +1,7 @@
 {
   "name": "box-cache",
-  "version": "1.0.0",
-  "description": "But a mere in-memory cache with DSL capabilities",
+  "version": "1.0.1",
+  "description": "But a mere Javascript in-memory nested cache with DSL capabilities",
   "main": "box-cache.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha"
