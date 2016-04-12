@@ -1,5 +1,5 @@
 {
-  "name": "box-cache",
+  "name": "cache-box",
   "version": "1.0.2",
   "description": "But a mere Javascript in-memory nested cache with DSL capabilities",
   "main": "box-cache.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kasre/box-cache.git"
+    "url": "https://github.com/Kasre/cachebox.git"
   },
   "keywords": [
     "cache",
@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kasre/box-cache/issues"
+    "url": "https://github.com/Kasre/cachebox/issues"
   },
-  "homepage": "https://github.com/Kasre/box-cache#readme"
+  "homepage": "https://github.com/Kasre/cachebox#readme"
 }

@@ -1,71 +1,71 @@
 var assert = require( 'assert' );
 
-var boxCache = require( './box-cache' )();
+var cacheBox = require( './cache-box' )();
 
 describe( 'set item', function () {
     it( 'should set item with a single key', function () {
-        boxCache.set( 'foo', 'bob' );
+        cacheBox.set( 'foo', 'bob' );
 
-        assert.equal( boxCache.get( 'foo' ), 'bob' );
+        assert.equal( cacheBox.get( 'foo' ), 'bob' );
     } );
 
     it( 'should set item with string path', function () {
-        boxCache.set( 'foo=>bar=>baz', 'alice' );
+        cacheBox.set( 'foo=>bar=>baz', 'alice' );
 
-        assert.equal( boxCache.get( 'foo=>bar=>baz' ), 'alice' );
+        assert.equal( cacheBox.get( 'foo=>bar=>baz' ), 'alice' );
     } );
 
     it( 'should set item with single item array path', function () {
-        boxCache.set( [ 'foo' ], 'jimmy' );
+        cacheBox.set( [ 'foo' ], 'jimmy' );
 
-        assert.equal( boxCache.get( [ 'foo' ] ), 'jimmy' );
+        assert.equal( cacheBox.get( [ 'foo' ] ), 'jimmy' );
     } );
 
     it( 'should set item with array path', function () {
-        boxCache.set( [ 'foo', 'bar', 'baz' ], 'joe' );
+        cacheBox.set( [ 'foo', 'bar', 'baz' ], 'joe' );
 
-        assert.equal( boxCache.get( [ 'foo', 'bar', 'baz' ] ), 'joe' );
+        assert.equal( cacheBox.get( [ 'foo', 'bar', 'baz' ] ), 'joe' );
     } );
 
     it( 'should override existing keys', function () {
-        boxCache.set( 'foo=>bar=>baz', 'tim' );
+        cacheBox.set( 'foo=>bar=>baz', 'tim' );
 
-        assert.equal( boxCache.get( [ 'foo', 'bar', 'baz' ] ), 'tim' );
+        assert.equal( cacheBox.get( [ 'foo', 'bar', 'baz' ] ), 'tim' );
 
-        boxCache.set( [ 'foo', 'bar', 'baz' ], 'jim' );
+        cacheBox.set( [ 'foo', 'bar', 'baz' ], 'jim' );
 
-        assert.equal( boxCache.get( [ 'foo', 'bar', 'baz' ] ), 'jim' );
+        assert.equal( cacheBox.get( [ 'foo', 'bar', 'baz' ] ), 'jim' );
     } );
 } );
 
 describe( 'delete item', function () {
     it( 'should delete item from single key path', function () {
-        boxCache.set( 'foo', 'jimmy' );
+        cacheBox.set( 'foo', 'jimmy' );
 
-        assert.equal( boxCache.get( 'foo' ), 'jimmy' );
+        assert.equal( cacheBox.get( 'foo' ), 'jimmy' );
 
-        boxCache.delete( 'foo' );
+        cacheBox.delete( 'foo' );
 
-        assert.equal( boxCache.get( 'foo' ), null );
+        assert.equal( cacheBox.get( 'foo' ), null );
     } );
 
     it( 'should delete item from string path', function () {
-        boxCache.set( 'foo=>bar', 'jimmy' );
+        cacheBox.set( 'foo=>bar', 'jimmy' );
 
-        assert.equal( boxCache.get( 'foo=>bar' ), 'jimmy' );
+        assert.equal( cacheBox.get( 'foo=>bar' ), 'jimmy' );
 
-        boxCache.delete( 'foo=>bar' );
+        cacheBox.delete( 'foo=>bar' );
 
-        assert.equal( boxCache.get( 'foo=>bar' ), null );
+        assert.equal( cacheBox.get( 'foo=>bar' ), null );
     } );
 
     it( 'should delete item from array path', function () {
-        boxCache.set( [ 'foo', 'bar' ], 'jimmy' );
+        cacheBox.set( [ 'foo', 'bar' ], 'jimmy' );
 
-        assert.equal( boxCache.get( [ 'foo', 'bar' ] ), 'jimmy' );
+        assert.equal( cacheBox.get( [ 'foo', 'bar' ] ), 'jimmy' );
 
-        boxCache.delete( [ 'foo', 'bar' ] );
+        cacheBox.delete( [ 'foo', 'bar' ] );
 
-        assert.equal( boxCache.get( [ 'foo', 'bar' ] ), null );
+        assert.equal( cacheBox.get( [ 'foo', 'bar' ] ), null );
     } );
 } );
