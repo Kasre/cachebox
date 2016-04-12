@@ -1,0 +1,29 @@
+{
+  "name": "box-cache",
+  "version": "1.0.0",
+  "description": "But a mere in-memory cache with DSL capabilities",
+  "main": "box-cache.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kasre/box-cache.git"
+  },
+  "keywords": [
+    "cache",
+    "caching"
+  ],
+  "author": {
+    "name": "Itay Kasre",
+    "email": "itaykasre@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kasre/box-cache/issues"
+  },
+  "homepage": "https://github.com/Kasre/box-cache#readme"
+}
