@@ -1,6 +1,6 @@
 {
   "name": "cache-box",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "But a mere Javascript in-memory nested cache with DSL capabilities",
   "main": "box-cache.js",
   "scripts": {
