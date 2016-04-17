@@ -1,6 +1,6 @@
 var assert = require( 'assert' );
 
-var cacheBox = require( './cache-box' )();
+var cacheBox = require( './index' )();
 
 describe( 'set item', function () {
     it( 'should set item with a single key', function () {

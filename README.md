@@ -4,7 +4,7 @@ But a mere Javascript in-memory nested cache with DSL capabilities
 ### Usage
 
 ```javascript
-var cacheBox = require( "cacheBox" );
+var cacheBox = require( "cache-box" );
 
 // set item to DSL cache path with nesting
 cacheBox().set( 'user=>alice', { name: 'alice' } );
